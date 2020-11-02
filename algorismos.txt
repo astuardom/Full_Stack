@@ -1,0 +1,26 @@
+function multiply(x,y) {
+    console.log(x);
+    console.log(y);
+}
+b = multiply(2,3);
+console.log(b);
+
+x=2
+y=3
+
+
+=========================================
+function multiply(x,y){
+		 (2,3)--->(2,5)
+    return x*y;(2*3)=6--->(5*2)=10
+}
+b = multiply(2,3);
+console.log(b);===>6
+console.log(multiply(5,2));===>10
+
+=========================================
+var x = [1,2,3,4,5,10];
+for(var i=0; i<5; i++) {
+   i = i + 3; 
+   console.log(i);
+}

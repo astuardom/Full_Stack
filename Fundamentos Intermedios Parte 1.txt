@@ -1,0 +1,120 @@
+Fundamentos Intermedios Parte 1=
+================================
+Ejercicio 1
+--------------------------------
+<script>
+	function sigma(num){
+		sum=0
+		for(i=num;i>0;i--){
+			sum=sum+i
+		}
+		console.log(sum)
+	}
+	sigma(5) // debería devolver 15 (1+2+3+4+5)
+</script>
+================================
+Ejercicio 2
+--------------------------------
+<script>
+	function factorial(num){
+		array=[]
+		for(i=num;i>0;i--){
+			array.push(i)
+		}
+		total = array[0]
+		for(j=1; j<array.length;j++){
+			total=total*j
+		}
+		console.log(total)
+	}
+	factorial(5) // debería devolver 120 (5*4*3*2*1)
+</script>
+================================
+Ejercicio 3
+--------------------------------
+<script>
+	function fibonacci1(num){
+        	arr=[0,1]
+                for(i=2;i<=num;i++){
+                    arr.push(arr[i-2]+arr[i-1])
+                }
+                console.log(arr[num])
+            }
+            fibonacci1(0) // debería devolver 0
+            fibonacci1(1) // debería devolver 1
+            fibonacci1(2) // debería devolver 1
+            fibonacci1(3) // debería devolver 2
+            fibonacci1(4) // debería devolver 3
+            fibonacci1(5) // debería devolver 5
+            fibonacci1(6) // debería devolvere 8
+            fibonacci1(7) // debería devolver 13
+</script>
+================================
+Ejercicio 4
+--------------------------------
+<script>
+	function arrPenultimo(arr){
+		if(arr.length<2){
+                    return null
+                }
+                return arr[arr.length-2]
+                
+            }
+            console.log(arrPenultimo([42,true,4,"Liam", 7])) // devuelve “Liam”. Si el array es muy pequeño, devuelve null.  
+            console.log(arrPenultimo([1])) // devuelve null
+</script>
+=================================
+Ejercicio 5
+---------------------------------
+<script>
+            function nUltimo(arr,n){
+                if(arr.length<n){
+                    return null
+                }
+                return arr[arr.length-n]
+                
+            }
+            console.log(nUltimo([5,2,3,6,4,9,7],3)) // devuelve 4 
+            console.log(nUltimo([5,2,3],4)) // devuelve null
+        </script>
+
+================================
+Ejercicio 6
+--------------------------------
+<script>
+	function sgdoMasGrande(arr,n){
+                if(arr.length<2){
+                    return null
+                }
+                temp = arr[arr.length-1]
+                for(i=arr.length-1;i>=0;i--){
+                    if(arr[i]>temp){
+                        temp=i
+                    }
+                }
+                delete arr[temp];
+                for(i=arr.length-1;i>=0;i--){
+                    if(arr[i]>temp){
+                        temp=arr[i]
+                    }
+                }
+                return temp
+            }
+            console.log(sgdoMasGrande([42,1,4,3.14,7])) // devuelve 7
+            console.log(sgdoMasGrande([5])) // devuelve null
+</script>
+================================
+Ejercicio 7
+--------------------------------
+<script>
+	function dobleProblema(arr){
+                arr.aux=[]
+                for(i=0;i<arr.length;i++){
+                    arr.aux.push(arr[i])
+                    arr.aux.push(arr[i])
+                }
+                return arr.aux
+            }
+            console.log(dobleProblema([4, "Ulysses", 42, false])) // devuelve [4,4, "Ulysses", "Ulysses", 42, 42, false, false].
+</script>
+================================

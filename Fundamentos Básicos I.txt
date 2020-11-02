@@ -1,0 +1,190 @@
+fundamentos básicos 1=
+======================
+Ejercicio 1
+----------------------
+<script>
+function array(){
+    z=[]
+    for(i=1;i<=255;i++){
+        z.push(i)
+    }
+    console.log(z)
+}
+array()
+</script>
+======================
+Ejercicio 2
+----------------------
+<script>
+function pares1000(){
+    sum = 0
+    for(i=2;i<=1000;i+=2){
+        sum = sum + i
+    }
+    console.log(sum)
+}
+pares1000()
+</script>
+======================
+Ejercicio 3
+----------------------
+<script>
+function impares5000(){
+    sum = 0
+    for(i=1;i<=5000;i+=2){
+        sum = sum + i
+    }
+    console.log(sum)
+}
+impares5000()
+</script>
+======================
+Ejercicio 4
+----------------------
+<script>
+function iterarArray(array){
+    sum = 0
+    for( var i=0; i<array.length; i++){
+        sum = sum + array[i]
+    }
+    
+    console.log(sum)
+}
+iterarArray([-5,2,5,12])
+</script>
+======================
+Ejercicio 5
+----------------------
+<script>
+function elmayor(array){
+    var temp = array[array.length-1]
+    for(var i=array.length-1; i>=0; i--){
+        if(array[i]>temp){
+            temp = array[i]
+        }
+    }
+    return temp
+}
+    console.log(elmayor([-3,3,5,7]))
+</script>
+======================
+Ejercicio 6
+----------------------
+<script>
+function avg(array){
+    var sum = 0
+    for(var i=array.length-1; i>=0; i--){
+        sum = sum + array[i]
+    }
+    return sum/array.length
+}
+    console.log(avg([1,3,5,7,20]))
+</script>
+======================
+Ejercicio 7
+----------------------
+<script>
+function impares(){
+    array = []
+    for(var i=1; i<=50; i++){
+        if(i%2==1){
+            array.push(i)
+            }
+    }
+    console.log(array)
+}
+impares()
+</script>
+======================
+Ejercicio 8
+----------------------
+<script>
+    function mayorquey(array,y){
+        var sum = 0
+        for(var i=0; i<array.length; i++){
+            if(array[i]>y){
+                    sum=sum+1
+                }
+        }
+        return(sum)
+    }
+    console.log(mayorquey([1,3,5,7],3)) // should log 2
+    </script>
+======================
+Ejercicio 9
+----------------------
+<script>
+    function cuadrado(array){
+        for(var i=0; i<array.length; i++){
+            array[i]=array[i]*array[i]
+        }
+        return(array)
+    }
+    console.log(cuadrado([1,5,10,-2]))
+    </script>
+======================
+Ejercicio 10
+----------------------
+<script>
+    function negativos(array){
+        for(var i=array.length-1; i>=0; i--){
+            if(array[i]<0){
+                array[i]=0
+            }
+        }
+        return(array)
+    }
+    console.log(negativos([1,5,10,-2])) // se convertirá en [1,5,10,0]
+    </script>
+======================
+Ejercicio 11
+----------------------
+<script>
+    function maxMinAvg(array){
+        z = []
+        temp = array[array.length-1]
+        temp1 = array[array.length-1]
+        sum = 0
+        for(var i=array.length-1; i>=0; i--){
+            if(array[i]>temp){
+                temp=array[i]
+            }
+            if(array[i]<temp1){
+                temp1=array[i]
+            }
+            sum = sum + array[i]
+        }
+        z.push(temp)
+        z.push(temp1)
+        z.push(sum/array.length)
+        return(z)
+    }
+    console.log(maxMinAvg([1,5,10,-2])) // devolverá [10,-2,3.5]
+    </script>
+======================
+Ejercicio 12
+----------------------
+<script>
+    function intercambiaValores(array){
+        temp = array[array.length-1]
+        array[array.length-1]=array[0]
+        array[0]=temp
+        return array
+    }
+    console.log(intercambiaValores([1,5,10,-2])) // será [-2,5,10,1]
+    </script> 
+======================
+Ejercicio 13
+----------------------
+<script>
+    function nroAString(array){
+        for(var i=array.length-1; i>=0; i--){
+            if(array[i]<0){
+                array[i]= 'Dojo'
+            }
+        }
+        return array;
+    }
+    console.log(nroAString([-1,-3,2])) // tu función devolverá [‘Dojo’,‘Dojo’,2]
+    </script>
+=======================
